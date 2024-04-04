@@ -1,0 +1,9 @@
+<div id="card">
+  <label for="text-area">Write your note:</label>
+  <textarea
+    [(ngModel)]="nuevaNota"
+    name="text-area"
+    placeholder="Write your note here"
+  ></textarea>
+  <button (click)="agregarNota()" type="button">Save Note</button>
+</div>

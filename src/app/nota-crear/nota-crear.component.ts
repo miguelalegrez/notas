@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NotasService } from '../notas-service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-nota-crear',
   standalone: true,
   templateUrl: './nota-crear.component.html',
   styleUrls: ['./nota-crear.component.css'],
-  // Solo necesitas importar FormsModule aquí
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
 })
 export class NotaCrearComponent {
   nuevaNota: string = '';

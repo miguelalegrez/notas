@@ -1,5 +1,10 @@
 <div class="grid-container">
   <div *ngFor="let nota of notas" class="nota-item">
     {{ nota }}
+    <div>
+      <button class="deleteButton" type="text" (click)="deleteNota(nota)">
+        Delete
+      </button>
+    </div>
   </div>
 </div>

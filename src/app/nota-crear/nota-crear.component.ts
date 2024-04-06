@@ -16,7 +16,11 @@ export class NotaCrearComponent {
   constructor(private notaService: NotasService) {}
 
   agregarNota() {
-    this.notaService.notas.push(this.nuevaNota);
-    this.nuevaNota = ''; // Limpiar el área de texto después de agregar la nota
+    if (this.nuevaNota.trim() !== '') {
+      this.notaService.notas.push(this.nuevaNota);
+      this.nuevaNota = ''; // Limpiar el área de texto después de agregar la nota
+    } else {
+      console.log('Introduce text');
+    }
   }
 }

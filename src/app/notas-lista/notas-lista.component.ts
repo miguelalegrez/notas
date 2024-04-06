@@ -16,4 +16,12 @@ export class NotasListaComponent {
   get notas(): string[] {
     return this.notasService.notas;
   }
+
+  deleteNota(nota: string) {
+    const index = this.notasService.notas.indexOf(nota); // Encuentra el índice de la nota
+    if (index !== -1) {
+      // Verifica si se encontró la nota
+      this.notasService.notas.splice(index, 1); // Elimina la nota del array en la posición index y elimina 1 elemento
+    }
+  }
 }

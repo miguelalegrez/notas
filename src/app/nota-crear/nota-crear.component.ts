@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
 export class NotaCrearComponent {
   nuevaNota: string = '';
 
+  /* Importamos NotasService con su constructor */
   constructor(private notaService: NotasService) {}
 
   agregarNota() {
